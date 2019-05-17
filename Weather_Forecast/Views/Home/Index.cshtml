@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Weather_Forecast.cidade>
+
+@{
+    ViewBag.Title = "Cidades";
+}
+
+<h4>Cidades</h4>
+
+<p>
+    @Html.ActionLink("Cadastrar", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.uf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pais)
+        </th>
+        <th>
+            Previsão
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pais)
+            </td>
+            <td>
+                @Html.ActionLink("Previsão do tempo", "Previsao", new { id = item.nome })
+            </td>
+        </tr>
+    }
+
+</table>

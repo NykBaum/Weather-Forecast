@@ -1,0 +1,44 @@
+﻿@model Weather_Forecast.cidade
+
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+@Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Cidade</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.codigo, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.codigo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.codigo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.nome, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.nome, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.nome, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            @ViewBag.msgErro
+            <a href="#" onclick="SalvarCidade();" class="btn btn-default">Salvar</a>
+        </div>
+    </div>
+</div>
+
+<div id="divTelefones" style="display:none;"></div>
+
+<div>
+    @Html.ActionLink("Cidades", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/Cidade.js"></script>
