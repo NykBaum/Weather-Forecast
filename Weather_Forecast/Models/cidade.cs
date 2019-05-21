@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Weather_Forecast.Models
+namespace Weather_Forecast
 {
 	[MetadataType(typeof(CidadeHelper))]
 	public partial class cidade { }
@@ -12,11 +12,5 @@ namespace Weather_Forecast.Models
 
 		[Display(Name = "Nome", Description = "Nome da cidade")]
 		public string nome { get; set; }
-
-		[Display(Name = "UF", Description = "Estado")]
-		public string uf { get; set; }
-
-		[Display(Name = "País", Description = "Nome do País")]
-		public string pais { get; set; }
 	}
 }

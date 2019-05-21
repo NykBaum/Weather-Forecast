@@ -16,7 +16,5 @@ namespace Weather_Forecast
     {
         public int codigo { get; set; }
         public string nome { get; set; }
-        public string uf { get; set; }
-        public string pais { get; set; }
     }
 }

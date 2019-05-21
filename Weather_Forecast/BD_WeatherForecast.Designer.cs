@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Rejane\Documents\Visual Studio 2017\Projects\Weather_Forecast\Weather_Forecast\EDM_WeatherForecast.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\reji_\Documents\Weather_Forecast\Weather_Forecast\BD_WeatherForecast.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

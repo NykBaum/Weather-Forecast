@@ -13,10 +13,10 @@ namespace Weather_Forecast
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BD_WEATHERFORECASTEntities : DbContext
+    public partial class BD_WEATHERFORECASTEntities1 : DbContext
     {
-        public BD_WEATHERFORECASTEntities()
-            : base("name=BD_WEATHERFORECASTEntities")
+        public BD_WEATHERFORECASTEntities1()
+            : base("name=BD_WEATHERFORECASTEntities1")
         {
         }
     

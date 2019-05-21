@@ -100,29 +100,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BD_WeatherForecast.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BD_WeatherForecast.edmx</DependentUpon>
+      <LastGenOutput>BD_WeatherForecast.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BD_WeatherForecast.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BD_WeatherForecast.edmx</DependentUpon>
+      <LastGenOutput>BD_WeatherForecast.cs</LastGenOutput>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="EDM_WeatherForecast.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>EDM_WeatherForecast.Context.cs</LastGenOutput>
-      <DependentUpon>EDM_WeatherForecast.edmx</DependentUpon>
-    </Content>
-    <Content Include="EDM_WeatherForecast.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EDM_WeatherForecast.edmx</DependentUpon>
-      <LastGenOutput>EDM_WeatherForecast.cs</LastGenOutput>
-    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="EDM_WeatherForecast.edmx">
+    <EntityDeploy Include="BD_WeatherForecast.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EDM_WeatherForecast.Designer.cs</LastGenOutput>
+      <LastGenOutput>BD_WeatherForecast.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="EDM_WeatherForecast.edmx.diagram">
-      <DependentUpon>EDM_WeatherForecast.edmx</DependentUpon>
+    <Content Include="BD_WeatherForecast.edmx.diagram">
+      <DependentUpon>BD_WeatherForecast.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Cidade.js" />
@@ -133,26 +133,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BD_WeatherForecast.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_WeatherForecast.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD_WeatherForecast.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_WeatherForecast.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD_WeatherForecast.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_WeatherForecast.edmx</DependentUpon>
+    </Compile>
     <Compile Include="cidade.cs">
-      <DependentUpon>EDM_WeatherForecast.tt</DependentUpon>
+      <DependentUpon>BD_WeatherForecast.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\ApiWeatherForecast.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="EDM_WeatherForecast.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EDM_WeatherForecast.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EDM_WeatherForecast.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EDM_WeatherForecast.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EDM_WeatherForecast.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EDM_WeatherForecast.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Controllers\Previsao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -170,6 +171,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\Previsao.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -10,9 +10,7 @@ namespace Weather_Forecast.Tests
 		[TestMethod]
 		public void ConsultarTemperaturasPorCidade_PassandoUmaCidadeValida()
 		{
-			ApiWeatherForecast apiWeatherForecast = new ApiWeatherForecast();
-
-			List<ApiWeatherForecast.Previsao> retorno = apiWeatherForecast.ConsultarTemperaturasPorCidade("Blumenau");
+			List<Previsao> retorno = ApiWeatherForecast.ConsultarTemperaturasPorCidade("Blumenau");
 
 			//Assert
 			Assert.IsNotNull(retorno);

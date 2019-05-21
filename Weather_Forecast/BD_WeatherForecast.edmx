@@ -11,8 +11,6 @@
           </Key>
           <Property Name="codigo" Type="int" Nullable="false" />
           <Property Name="nome" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="uf" Type="varchar" MaxLength="20" />
-          <Property Name="pais" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityContainer Name="BD_WEATHERFORECASTModelStoreContainer">
           <EntitySet Name="cidade" EntityType="Self.cidade" Schema="dbo" store:Type="Tables" />
@@ -28,10 +26,8 @@
           </Key>
           <Property Name="codigo" Type="Int32" Nullable="false" />
           <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="uf" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="pais" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="BD_WEATHERFORECASTEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BD_WEATHERFORECASTEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="cidade" EntityType="Self.cidade" />
         </EntityContainer>
       </Schema>
@@ -39,14 +35,12 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BD_WEATHERFORECASTModelStoreContainer" CdmEntityContainer="BD_WEATHERFORECASTEntities">
+        <EntityContainerMapping StorageEntityContainer="BD_WEATHERFORECASTModelStoreContainer" CdmEntityContainer="BD_WEATHERFORECASTEntities1">
           <EntitySetMapping Name="cidade">
             <EntityTypeMapping TypeName="BD_WEATHERFORECASTModel.cidade">
               <MappingFragment StoreEntitySet="cidade">
                 <ScalarProperty Name="codigo" ColumnName="codigo" />
                 <ScalarProperty Name="nome" ColumnName="nome" />
-                <ScalarProperty Name="uf" ColumnName="uf" />
-                <ScalarProperty Name="pais" ColumnName="pais" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

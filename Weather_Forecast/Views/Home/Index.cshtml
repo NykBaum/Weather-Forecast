@@ -13,16 +13,13 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.codigo)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.nome)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.uf)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.pais)
-        </th>
-        <th>
-            Previsão
+            Operações
         </th>
         <th></th>
     </tr>
@@ -31,18 +28,18 @@
     {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.codigo)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.uf)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.pais)
-            </td>
-            <td>
-                @Html.ActionLink("Previsão do tempo", "Previsao", new { id = item.nome })
+                @Html.ActionLink("Previsão do tempo", "Previsao", new { cidade = item.nome })
             </td>
         </tr>
     }
 
 </table>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/Cidade.js"></script>
